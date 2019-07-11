@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <title th:text="${title}">My Categories</title>
+
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />-->
+<!--    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+
+</head>
+<body>
+
+<ul>
+    <li th:each="category : ${categories}">
+       <a th:text="${category.name}"></a>
+    </li>
+</ul>
+
+<p> <a href="category/add"> Add Category </a> </p>
+
+
+
+
+
+</body>
+</html>
