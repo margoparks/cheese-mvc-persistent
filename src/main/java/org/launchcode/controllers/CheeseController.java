@@ -26,6 +26,9 @@ public class CheeseController {
     @Autowired
     private CheeseDao cheeseDao;
 
+    @Autowired
+    private CategoryDao categoryDao;
+
     // Request path: /cheese
     @RequestMapping(value = "")
     public String index(Model model) {
@@ -53,7 +56,6 @@ public class CheeseController {
             model.addAttribute("title", "Add Cheese");
             return "cheese/add";
         }
-        Category categoryDao;
         Category cat = categoryDao.findOne(categoryId);
         newCheese.setCategory(cat);
         newCheese.setCategory(cat);
